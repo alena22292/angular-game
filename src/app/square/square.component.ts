@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-square',
@@ -6,11 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./square.component.scss']
 })
 export class SquareComponent {
-  num:number = Math.floor(Math.random() * 10);
-  date = new Date();
-
-  // Constructor mostly using for server
-  constructor() {
-    setInterval(() => this.date = new Date(), 100);
-  }
+  // all elements that starts from @ - are decorators;
+  @Input() value: 'X' | 'O';
 }

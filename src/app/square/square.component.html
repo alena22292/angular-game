@@ -1,5 +1,6 @@
-<div>
-    <h3>Today is {{date}}</h3>
-    <span>Your lucky number is {{ num }}</span>
-</div>
+<button *ngIf="!value">{{ value }}</button>
+<button class="xplayer" *ngIf="value == 'X'">{{ value }}</button>
+<button class="oplayer" *ngIf="value == 'O'">{{ value }}</button>
+
+
 
